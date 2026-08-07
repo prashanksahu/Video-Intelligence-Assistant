@@ -3,8 +3,10 @@ import os
 from rich import print
 
 WHISPER_MODEL = os.getenv("WHISPER_MODEL", default='small')
+# SARVAM_API_KEY = os.getenv("SARVAM_API_KEY")
 
 _model = None
+
 
 def load_whisper_model():
     global _model

@@ -81,12 +81,6 @@ def process_audio_from_url(path : str) -> list:
 
 
 
-# if __name__=="__main__":
-#     print("Downloading....")
-#     file = download_youtube_audio(url="https://youtu.be/9wG4C42JhN4?si=zHCEM_2HzJXpv6RN")
-#     print('Converting...')
-#     file = convert_to_wav_mono(file)
-#     print("Chunking....")
-#     print(audio_to_chunk(file))
+
 
  

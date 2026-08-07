@@ -10,6 +10,7 @@ ffmpeg-python              # FFmpeg bindings (FFmpeg binary must be installed se
 openai-whisper          # OpenAI Whisper (runs locally)
 torch                      # PyTorch backend for Whisper
 torchaudio                 # Audio utilities for PyTorch
+# sarvamai
 
 # ── Translation (Hindi → English) ─────────────────────────────────────────────
 deep-translator           # Lightweight translation wrapper (Google backend)
