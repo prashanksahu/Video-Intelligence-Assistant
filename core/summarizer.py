@@ -5,6 +5,9 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 
+from dotenv import load_dotenv
+load_dotenv()
+
 def load_llm_model():
     MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
     llm_model =  ChatMistralAI(name = "mistral-small-2506", api_key = MISTRAL_API_KEY, temperature = 0.3)
@@ -65,4 +68,5 @@ def generate_title(transcipt : str) -> str:
         |StrOutputParser()
     )
 
-    return title_chain.invoke(transcipt[:2000])
+    title = title_chain.invoke(transcipt[:2000])
+    return title

@@ -20,7 +20,7 @@ def download_youtube_audio( url : str) -> str:
                 "preferredquality" : "192"
             }
         ],
-        'quiet' : False
+        'quiet' : True
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info = ydl.extract_info(url, download=True)
