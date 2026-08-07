@@ -10,7 +10,7 @@ load_dotenv()
 
 def load_llm_model():
     MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
-    llm_model =  ChatMistralAI(name = "mistral-small-2506", api_key = MISTRAL_API_KEY, temperature = 0.3)
+    llm_model =  ChatMistralAI(name = "mistral-small-2506", api_key = MISTRAL_API_KEY, temperature = 0.3, max_retries=5)
     return llm_model
 
 def split_transcript(transcript : str) -> list:

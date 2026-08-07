@@ -9,7 +9,7 @@ load_dotenv()
 
 def load_llm_model():
     MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
-    llm_model =  ChatMistralAI(name = "mistral-small-2506", api_key = MISTRAL_API_KEY, temperature = 0.2)
+    llm_model =  ChatMistralAI(name = "mistral-small-2506", api_key = MISTRAL_API_KEY, temperature = 0.2, max_retries=5)
     return llm_model
 
 def build_chain(system_prompt : str):
