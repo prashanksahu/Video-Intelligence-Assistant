@@ -46,7 +46,7 @@ def convert_to_wav_mono(file_path : str) -> str:
 
     return output_path
 
-def audio_to_chunk(file_path : str, chunk_minutes : int = 1) -> list:
+def audio_to_chunk(file_path : str, chunk_minutes : int = 10) -> list:
     '''This will split an audio file into fixed length chunks(by default and fixed at 10 minutes)'''
     audio = AudioSegment.from_wav(file = file_path)
 
